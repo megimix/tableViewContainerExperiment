@@ -10,4 +10,6 @@
 
 @interface TableViewContainerCell : UITableViewCell
 
+@property (weak, nonatomic) UIView *continerView;
+
 @end

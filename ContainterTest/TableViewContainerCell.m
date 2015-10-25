@@ -10,14 +10,28 @@
 
 @implementation TableViewContainerCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)setContinerView:(UIView *)continerView {
+    _continerView = continerView;
+    _continerView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.contentView addSubview:_continerView];
+    
+    NSDictionary *viewsDictionary = @{@"contentView": self.contentView,
+                                      @"_continerView": _continerView};
+    
+    [self.contentView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_continerView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:viewsDictionary]];
+    [self.contentView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_continerView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:viewsDictionary]];
+    
+    [self setNeedsUpdateConstraints];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end

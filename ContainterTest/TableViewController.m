@@ -9,6 +9,9 @@
 #import "TableViewController.h"
 
 @interface TableViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UIView *topView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -18,14 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view layoutIfNeeded];
-    
     [self.tableView reloadData];
 }
 
+- (CGFloat)viewControllerHeight {
+    CGFloat viewControllerHeight = 0.0f;
+    
+    viewControllerHeight += self.topView.frame.size.height;
+    viewControllerHeight += self.tableView.contentSize.height;
+    
+    return viewControllerHeight;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 66;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -38,6 +47,7 @@
     cell.contentView.backgroundColor = ((indexPath.row % 2 == 0)
                             ? [UIColor lightGrayColor]
                             : [UIColor darkGrayColor]);
+    cell.textLabel.text = @(indexPath.row).stringValue;
     return cell;
 }
 

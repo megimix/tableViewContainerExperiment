@@ -155,8 +155,6 @@
 		CC6E70421B1ED5F400800905 /* ContainerTableView */ = {
 			isa = PBXGroup;
 			children = (
-				CC6E705A1B1ED6EB00800905 /* TableViewContainerCell */,
-				CC6E70541B1ED6B300800905 /* CollectionViewContainerCell */,
 				CC6E70431B1ED62C00800905 /* ContainerTableViewController.h */,
 				CC6E70441B1ED62C00800905 /* ContainerTableViewController.m */,
 				CC6E70451B1ED62C00800905 /* ContainerTableViewController.xib */,
@@ -167,6 +165,7 @@
 		CC6E70481B1ED63700800905 /* CollectionViewCotrller */ = {
 			isa = PBXGroup;
 			children = (
+				CC6E70541B1ED6B300800905 /* CollectionViewContainerCell */,
 				CC6E70491B1ED66F00800905 /* CollectionViewCotroller.h */,
 				CC6E704A1B1ED66F00800905 /* CollectionViewCotroller.m */,
 				CC6E704B1B1ED66F00800905 /* CollectionViewCotroller.xib */,
@@ -177,6 +176,7 @@
 		CC6E704E1B1ED67A00800905 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CC6E705A1B1ED6EB00800905 /* TableViewContainerCell */,
 				CC6E704F1B1ED6A500800905 /* TableViewController.h */,
 				CC6E70501B1ED6A500800905 /* TableViewController.m */,
 				CC6E70511B1ED6A500800905 /* TableViewController.xib */,
@@ -512,6 +512,7 @@
 				CC6E703E1B1ED40900800905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC6E703F1B1ED40900800905 /* Build configuration list for PBXNativeTarget "ContainterTestTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +521,7 @@
 				CC6E70411B1ED40900800905 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

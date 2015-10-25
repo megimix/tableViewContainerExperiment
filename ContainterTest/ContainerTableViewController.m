@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *containerTableView;
 
 @property (strong, nonatomic) TableViewController *tableViewController;
-@property (strong, nonatomic) CollectionViewCotroller *collectionViewController;
 
 @end
 
@@ -24,47 +23,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self createTableViewController];
+    
+    [self.containerTableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    self.containerTableView.delegate = self;
-    self.containerTableView.dataSource = self;
-    
+//    [self.containerTableView reloadData];
+}
+
+- (void)createTableViewController {
     self.tableViewController = [[TableViewController alloc] initWithNibName:NSStringFromClass([TableViewController class]) bundle:nil];
-//    [self.tableViewController willMoveToParentViewController:self];
-//    [self addChildViewController:self.tableViewController];
-//    [self.tableViewController didMoveToParentViewController:self];
-    if  (self.tableViewController.view) {}
-    self.tableViewController.view.bounds = self.view.bounds;
     
-    self.collectionViewController = [[CollectionViewCotroller alloc] initWithNibName:NSStringFromClass([CollectionViewCotroller class]) bundle:nil];
-    [self.collectionViewController willMoveToParentViewController:self];
-    [self addChildViewController:self.collectionViewController];
-    [self.collectionViewController didMoveToParentViewController:self];
-    if (self.collectionViewController.view) {}
+    [self.tableViewController willMoveToParentViewController:self];
+    [self addChildViewController:self.tableViewController];
+    [self.tableViewController didMoveToParentViewController:self];
     
-    [self.view layoutIfNeeded];
-    
-    [self.containerTableView reloadData];
+    [self.tableViewController.view layoutIfNeeded];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    NSInteger numberOfRowsInSection = 0;
+    switch (section) {
+        case 0:
+            numberOfRowsInSection = 2;
+            break;
+        case 1:
+            numberOfRowsInSection = 1;
+            break;
+        case 2:
+            numberOfRowsInSection = 2;
+            break;
+            
+        default:
+            break;
+    }
+    return numberOfRowsInSection;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat heightForRowAtIndexPath = 44.0f;
     
-    switch (indexPath.row) {
-        case 0:
-            heightForRowAtIndexPath = self.collectionViewController.view.frame.size.height;
+    switch (indexPath.section) {
+        case 1: {
+            
+            heightForRowAtIndexPath = [self.tableViewController viewControllerHeight];
             break;
-        case (10 - 1):
-            heightForRowAtIndexPath = self.tableViewController.view.frame.size.height;
-            break;
+        }
             
         default:
             break;
@@ -75,35 +87,31 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
     
-    switch (indexPath.row) {
-        case 0: {
-            static NSString *identifier = @"CollectionViewContainerCell";
-            
-            id cellObject = [tableView dequeueReusableCellWithIdentifier:identifier];
-            
-            if (!cellObject) {
-                cellObject = [[[NSBundle mainBundle] loadNibNamed:identifier owner:cellObject options:nil] objectAtIndex:0];
-            }
-            
-            cell = (UITableViewCell *)cellObject;
-            [cell addSubview:self.collectionViewController.view];
-            
+    switch (indexPath.section) {
+        case 0:
+        case 2:{
+            cell = [UITableViewCell new];
+            [cell layoutIfNeeded];
+            cell.textLabel.text = [NSString stringWithFormat:@"%li - %li",(long)indexPath.section, (long)indexPath.row];
             break;
         }
-        case (10 - 1): {
+        case 1: {
             static NSString *identifier = @"TableViewContainerCell";
             
-            id cellObject = [tableView dequeueReusableCellWithIdentifier:identifier];
+            id tableViewContainerCellObject = [tableView dequeueReusableCellWithIdentifier:identifier];
             
-            if (!cellObject) {
-                cellObject = [[[NSBundle mainBundle] loadNibNamed:identifier owner:cellObject options:nil] objectAtIndex:0];
-                UITableViewCell *newCell = (UITableViewCell *)cellObject;
-//                newCell.bounds = self.view.bounds;
-                [newCell layoutIfNeeded];
+            if (!tableViewContainerCellObject) {
+                tableViewContainerCellObject = [[[NSBundle mainBundle] loadNibNamed:identifier owner:tableViewContainerCellObject options:nil] objectAtIndex:0];
             }
             
-            cell = (UITableViewCell *)cellObject;
-            [cell addSubview:self.tableViewController.view];
+            if ([tableViewContainerCellObject isKindOfClass:[TableViewContainerCell class]]) {
+                TableViewContainerCell *aTableViewContainerCell = (TableViewContainerCell *)tableViewContainerCellObject;
+                
+                aTableViewContainerCell.continerView = self.tableViewController.view;
+                
+                cell = aTableViewContainerCell;
+            }
+            
             break;
         }
         default:
@@ -113,9 +121,6 @@
     if (!cell) {
         cell = [UITableViewCell new];
     }
-    
-    [cell layoutIfNeeded];
-    cell.textLabel.text = [NSString stringWithFormat:@"%li",(long)indexPath.row];
     
     return cell;
 }

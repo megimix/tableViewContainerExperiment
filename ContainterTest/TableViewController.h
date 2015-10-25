@@ -10,4 +10,6 @@
 
 @interface TableViewController : UIViewController
 
+- (CGFloat)viewControllerHeight;
+
 @end
