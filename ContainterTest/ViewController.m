@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ContainerTableViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 
@@ -16,12 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    ContainerTableViewController *vc= [[ContainerTableViewController alloc] init];
+//    TableViewController *vc = [[TableViewController alloc] init];
+    
+//    [vc willMoveToParentViewController:self];
+//    [self addChildViewController:vc];
+//    [vc didMoveToParentViewController:self];
+    
+    [self presentViewController:vc animated:NO completion:nil];
+}
+
+- (void)getData {
+    
 }
 
 @end

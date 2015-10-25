@@ -14,6 +14,17 @@
 		CC6E702A1B1ED40900800905 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC6E70291B1ED40900800905 /* Images.xcassets */; };
 		CC6E702D1B1ED40900800905 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E702B1B1ED40900800905 /* LaunchScreen.xib */; };
 		CC6E70391B1ED40900800905 /* ContainterTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E70381B1ED40900800905 /* ContainterTestTests.m */; };
+		CC6E70461B1ED62C00800905 /* ContainerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E70441B1ED62C00800905 /* ContainerTableViewController.m */; };
+		CC6E70471B1ED62C00800905 /* ContainerTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E70451B1ED62C00800905 /* ContainerTableViewController.xib */; };
+		CC6E704C1B1ED66F00800905 /* CollectionViewCotroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E704A1B1ED66F00800905 /* CollectionViewCotroller.m */; };
+		CC6E704D1B1ED66F00800905 /* CollectionViewCotroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E704B1B1ED66F00800905 /* CollectionViewCotroller.xib */; };
+		CC6E70521B1ED6A500800905 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E70501B1ED6A500800905 /* TableViewController.m */; };
+		CC6E70531B1ED6A500800905 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E70511B1ED6A500800905 /* TableViewController.xib */; };
+		CC6E70581B1ED6E300800905 /* CollectionViewContainerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E70561B1ED6E300800905 /* CollectionViewContainerCell.m */; };
+		CC6E70591B1ED6E300800905 /* CollectionViewContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E70571B1ED6E300800905 /* CollectionViewContainerCell.xib */; };
+		CC6E705E1B1ED70600800905 /* TableViewContainerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E705C1B1ED70600800905 /* TableViewContainerCell.m */; };
+		CC6E705F1B1ED70600800905 /* TableViewContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6E705D1B1ED70600800905 /* TableViewContainerCell.xib */; };
+		CC6E706D1B1F026700800905 /* UIView+nib.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6E706C1B1F026700800905 /* UIView+nib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +51,23 @@
 		CC6E70321B1ED40900800905 /* ContainterTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContainterTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC6E70371B1ED40900800905 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC6E70381B1ED40900800905 /* ContainterTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContainterTestTests.m; sourceTree = "<group>"; };
+		CC6E70431B1ED62C00800905 /* ContainerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerTableViewController.h; sourceTree = "<group>"; };
+		CC6E70441B1ED62C00800905 /* ContainerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerTableViewController.m; sourceTree = "<group>"; };
+		CC6E70451B1ED62C00800905 /* ContainerTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContainerTableViewController.xib; sourceTree = "<group>"; };
+		CC6E70491B1ED66F00800905 /* CollectionViewCotroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCotroller.h; sourceTree = "<group>"; };
+		CC6E704A1B1ED66F00800905 /* CollectionViewCotroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCotroller.m; sourceTree = "<group>"; };
+		CC6E704B1B1ED66F00800905 /* CollectionViewCotroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCotroller.xib; sourceTree = "<group>"; };
+		CC6E704F1B1ED6A500800905 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		CC6E70501B1ED6A500800905 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		CC6E70511B1ED6A500800905 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		CC6E70551B1ED6E300800905 /* CollectionViewContainerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewContainerCell.h; sourceTree = "<group>"; };
+		CC6E70561B1ED6E300800905 /* CollectionViewContainerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewContainerCell.m; sourceTree = "<group>"; };
+		CC6E70571B1ED6E300800905 /* CollectionViewContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewContainerCell.xib; sourceTree = "<group>"; };
+		CC6E705B1B1ED70600800905 /* TableViewContainerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewContainerCell.h; sourceTree = "<group>"; };
+		CC6E705C1B1ED70600800905 /* TableViewContainerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewContainerCell.m; sourceTree = "<group>"; };
+		CC6E705D1B1ED70600800905 /* TableViewContainerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewContainerCell.xib; sourceTree = "<group>"; };
+		CC6E706B1B1F026700800905 /* UIView+nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+nib.h"; sourceTree = "<group>"; };
+		CC6E706C1B1F026700800905 /* UIView+nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+nib.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +109,9 @@
 		CC6E701B1B1ED40900800905 /* ContainterTest */ = {
 			isa = PBXGroup;
 			children = (
+				CC6E704E1B1ED67A00800905 /* TableViewController */,
+				CC6E70481B1ED63700800905 /* CollectionViewCotrller */,
+				CC6E70421B1ED5F400800905 /* ContainerTableView */,
 				CC6E70201B1ED40900800905 /* AppDelegate.h */,
 				CC6E70211B1ED40900800905 /* AppDelegate.m */,
 				CC6E70231B1ED40900800905 /* ViewController.h */,
@@ -89,6 +120,8 @@
 				CC6E70291B1ED40900800905 /* Images.xcassets */,
 				CC6E702B1B1ED40900800905 /* LaunchScreen.xib */,
 				CC6E701C1B1ED40900800905 /* Supporting Files */,
+				CC6E706B1B1F026700800905 /* UIView+nib.h */,
+				CC6E706C1B1F026700800905 /* UIView+nib.m */,
 			);
 			path = ContainterTest;
 			sourceTree = "<group>";
@@ -117,6 +150,58 @@
 				CC6E70371B1ED40900800905 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC6E70421B1ED5F400800905 /* ContainerTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E705A1B1ED6EB00800905 /* TableViewContainerCell */,
+				CC6E70541B1ED6B300800905 /* CollectionViewContainerCell */,
+				CC6E70431B1ED62C00800905 /* ContainerTableViewController.h */,
+				CC6E70441B1ED62C00800905 /* ContainerTableViewController.m */,
+				CC6E70451B1ED62C00800905 /* ContainerTableViewController.xib */,
+			);
+			name = ContainerTableView;
+			sourceTree = "<group>";
+		};
+		CC6E70481B1ED63700800905 /* CollectionViewCotrller */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E70491B1ED66F00800905 /* CollectionViewCotroller.h */,
+				CC6E704A1B1ED66F00800905 /* CollectionViewCotroller.m */,
+				CC6E704B1B1ED66F00800905 /* CollectionViewCotroller.xib */,
+			);
+			name = CollectionViewCotrller;
+			sourceTree = "<group>";
+		};
+		CC6E704E1B1ED67A00800905 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E704F1B1ED6A500800905 /* TableViewController.h */,
+				CC6E70501B1ED6A500800905 /* TableViewController.m */,
+				CC6E70511B1ED6A500800905 /* TableViewController.xib */,
+			);
+			name = TableViewController;
+			sourceTree = "<group>";
+		};
+		CC6E70541B1ED6B300800905 /* CollectionViewContainerCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E70551B1ED6E300800905 /* CollectionViewContainerCell.h */,
+				CC6E70561B1ED6E300800905 /* CollectionViewContainerCell.m */,
+				CC6E70571B1ED6E300800905 /* CollectionViewContainerCell.xib */,
+			);
+			name = CollectionViewContainerCell;
+			sourceTree = "<group>";
+		};
+		CC6E705A1B1ED6EB00800905 /* TableViewContainerCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC6E705B1B1ED70600800905 /* TableViewContainerCell.h */,
+				CC6E705C1B1ED70600800905 /* TableViewContainerCell.m */,
+				CC6E705D1B1ED70600800905 /* TableViewContainerCell.xib */,
+			);
+			name = TableViewContainerCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC6E70281B1ED40900800905 /* Main.storyboard in Resources */,
+				CC6E705F1B1ED70600800905 /* TableViewContainerCell.xib in Resources */,
 				CC6E702D1B1ED40900800905 /* LaunchScreen.xib in Resources */,
+				CC6E70591B1ED6E300800905 /* CollectionViewContainerCell.xib in Resources */,
+				CC6E70471B1ED62C00800905 /* ContainerTableViewController.xib in Resources */,
+				CC6E70531B1ED6A500800905 /* TableViewController.xib in Resources */,
 				CC6E702A1B1ED40900800905 /* Images.xcassets in Resources */,
+				CC6E704D1B1ED66F00800905 /* CollectionViewCotroller.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6E704C1B1ED66F00800905 /* CollectionViewCotroller.m in Sources */,
+				CC6E705E1B1ED70600800905 /* TableViewContainerCell.m in Sources */,
+				CC6E706D1B1F026700800905 /* UIView+nib.m in Sources */,
+				CC6E70521B1ED6A500800905 /* TableViewController.m in Sources */,
 				CC6E70251B1ED40900800905 /* ViewController.m in Sources */,
+				CC6E70581B1ED6E300800905 /* CollectionViewContainerCell.m in Sources */,
 				CC6E70221B1ED40900800905 /* AppDelegate.m in Sources */,
 				CC6E701F1B1ED40900800905 /* main.m in Sources */,
+				CC6E70461B1ED62C00800905 /* ContainerTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

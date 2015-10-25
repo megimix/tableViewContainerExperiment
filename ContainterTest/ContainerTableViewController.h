@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ContainerTableViewController.h
 //  ContainterTest
 //
 //  Created by Tal Shachar on 6/3/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController 
-
+@interface ContainerTableViewController : UIViewController
 
 @end
-
